@@ -13,7 +13,7 @@ const Countries = () => {
 
         console.log(data);
 
-    // les "[]" permettent de ne jouer qu'une seul fois le useEffect
+    // les "[]" permettent de ne jouer qu'une seule fois le useEffect
     }, []);
     return (
         <div></div>
