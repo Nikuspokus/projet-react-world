@@ -11,12 +11,18 @@ const Countries = () => {
         axios.get("https://restcountries.eu/rest/v2/all?fields=name;population;region;capital;flag")
             .then((res) => setData(res.data));
 
-        console.log(data);
-
-    // les "[]" permettent de ne jouer qu'une seule fois le useEffect
+        // les "[]" permettent de ne jouer qu'une seule fois le useEffect
     }, []);
     return (
-        <div></div>
+        <div className="countries">
+            <ul classname="countries-list">
+                {data.map((country) => (
+                    <li>
+                        { country.name}
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
 
 };
