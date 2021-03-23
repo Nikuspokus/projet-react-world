@@ -53,8 +53,13 @@ const Countries = () => {
                         })}
                 </ul>
             </div>
+            <div className="cancel">
+                {selectedRadio && <h5 onClick={() => setSelectedRadio("")}>Annuler Recherche</h5>}
+            </div>
             <ul className="countries-list">
-                {sortedData.map((country) => (
+                {sortedData
+                    .filter((country) => country.region.includes(selectedRadio))
+                    .map((country) => (
                     <Card country={country} key={country.name} />
                 ))}
             </ul>
