@@ -7,6 +7,7 @@ const Countries = () => {
     // data = c'est notre variable, là ou on va mettre nos données
     // setData = c'est lélément par lequel on passera pour actualiser les données
     const [data, setData] = useState([]);
+    const [sortedData, setSortedData] = useState([]);
 
     useEffect(() => {
         axios.get("https://restcountries.eu/rest/v2/all?fields=name;population;region;capital;flag")
