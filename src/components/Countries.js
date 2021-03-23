@@ -22,7 +22,7 @@ const Countries = () => {
                     setPlayOnce(false);
                 });
         }
-
+// la methode sortedCountry permet de faire du tri ici par rapport à la population mais la logique s'applique sur tout
         const sortedCountry = () => {
             //transformation de notre array en objet pour pouvoir appliquer la methode sort
             const countryObj = Object.keys(data).map((i) => data[i])
